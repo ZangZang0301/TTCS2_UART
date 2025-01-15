@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"UART_RX": {
+			"proto_instances": {
+			}
+		}
+	}
+}

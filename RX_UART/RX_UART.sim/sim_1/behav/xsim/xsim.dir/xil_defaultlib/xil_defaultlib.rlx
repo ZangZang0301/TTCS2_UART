@@ -1,0 +1,8 @@
+0.7
+v2020.2.2
+Feb  9 2021
+06:17:39
+D:/Vivado/TTCS2/RX_UART/RX_UART.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/Vivado/TTCS2/RX_UART/RX_UART.srcs/sim_1/new/TB_FSM.vhd,1735751156,vhdl,,,,tb_fsm,,,,,,,,
+D:/Vivado/TTCS2/RX_UART/RX_UART.srcs/sources_1/new/FSM_RX.vhd,1735758134,vhdl,D:/Vivado/TTCS2/RX_UART/RX_UART.srcs/sim_1/new/TB_FSM.vhd,,,fsm_rx,,,,,,,,
+D:/Vivado/TTCS2/TTCS2/TTCS2.srcs/sources_1/new/COUNTER.vhd,1735030843,vhdl,D:/Vivado/TTCS2/RX_UART/RX_UART.srcs/sources_1/new/FSM_RX.vhd,,,counter,,,,,,,,

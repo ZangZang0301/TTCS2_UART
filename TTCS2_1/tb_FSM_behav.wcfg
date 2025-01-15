@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_FSM_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_FSM" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1558166fs"></ZoomStartTime>
+      <ZoomEndTime time="1644367fs"></ZoomEndTime>
+      <Cursor1Time time="1630000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/tb_FSM/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/Tx_Start" type="logic">
+      <obj_property name="ElementShortName">Tx_Start</obj_property>
+      <obj_property name="ObjectShortName">Tx_Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/Tx_done" type="logic">
+      <obj_property name="ElementShortName">Tx_done</obj_property>
+      <obj_property name="ObjectShortName">Tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/Tx" type="logic">
+      <obj_property name="ElementShortName">Tx</obj_property>
+      <obj_property name="ObjectShortName">Tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/Tx_Start" type="logic">
+      <obj_property name="ElementShortName">Tx_Start</obj_property>
+      <obj_property name="ObjectShortName">Tx_Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/Tx_done" type="logic">
+      <obj_property name="ElementShortName">Tx_done</obj_property>
+      <obj_property name="ObjectShortName">Tx_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/Tx" type="logic">
+      <obj_property name="ElementShortName">Tx</obj_property>
+      <obj_property name="ObjectShortName">Tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/rst_s" type="logic">
+      <obj_property name="ElementShortName">rst_s</obj_property>
+      <obj_property name="ObjectShortName">rst_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/rst_b" type="logic">
+      <obj_property name="ElementShortName">rst_b</obj_property>
+      <obj_property name="ObjectShortName">rst_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/bit_counter" type="array">
+      <obj_property name="ElementShortName">bit_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_counter[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/sample_counter" type="array">
+      <obj_property name="ElementShortName">sample_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_counter[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/data_buff" type="array">
+      <obj_property name="ElementShortName">data_buff[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_buff[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/en_b" type="logic">
+      <obj_property name="ElementShortName">en_b</obj_property>
+      <obj_property name="ObjectShortName">en_b</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/en_s" type="logic">
+      <obj_property name="ElementShortName">en_s</obj_property>
+      <obj_property name="ObjectShortName">en_s</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_FSM/uut/N" type="other">
+      <obj_property name="ElementShortName">N</obj_property>
+      <obj_property name="ObjectShortName">N</obj_property>
+   </wvobject>
+</wave_config>

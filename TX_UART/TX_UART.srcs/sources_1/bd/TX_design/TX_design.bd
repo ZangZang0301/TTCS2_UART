@@ -1,0 +1,192 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x7F9408085C43D12A",
+      "device": "xc7a35ticsg324-1L",
+      "gen_directory": "../../../../TX_UART.gen/sources_1/bd/TX_design",
+      "name": "TX_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2.2"
+    },
+    "design_tree": {
+      "ila_0": "",
+      "TX_UART_0": "",
+      "vio_0": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "Tx_0": {
+        "direction": "O"
+      },
+      "data_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "TX_design_ila_0_0",
+        "xci_path": "ip\\TX_design_ila_0_0\\TX_design_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "TX_UART_0": {
+        "vlnv": "xilinx.com:module_ref:TX_UART:1.0",
+        "xci_name": "TX_design_TX_UART_0_0",
+        "xci_path": "ip\\TX_design_TX_UART_0_0\\TX_design_TX_UART_0_0.xci",
+        "inst_hier_path": "TX_UART_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "TX_UART",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "TX_design_sys_clock",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Tx_Start": {
+            "direction": "I"
+          },
+          "Tx": {
+            "direction": "O"
+          },
+          "Tx_done": {
+            "direction": "O"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "TX_design_vio_0_0",
+        "xci_path": "ip\\TX_design_vio_0_0\\TX_design_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "1"
+          },
+          "C_PROBE_IN0_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "TX_UART_0_Tx_done": {
+        "ports": [
+          "TX_UART_0/Tx_done",
+          "ila_0/probe2"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "sys_clock",
+          "ila_0/clk",
+          "TX_UART_0/clk",
+          "vio_0/clk"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "TX_UART_0/rst"
+        ]
+      },
+      "Tx": {
+        "ports": [
+          "TX_UART_0/Tx",
+          "Tx_0",
+          "ila_0/probe0"
+        ]
+      },
+      "data_0_1": {
+        "ports": [
+          "data_0",
+          "ila_0/probe1",
+          "TX_UART_0/data"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "TX_UART_0/Tx_Start"
+        ]
+      }
+    }
+  }
+}

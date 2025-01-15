@@ -1,0 +1,437 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFE18C54688F903EF",
+      "device": "xc7a35ticsg324-1L",
+      "gen_directory": "../../../../TTCS2_1.gen/sources_1/bd/TTCS_1",
+      "name": "TTCS_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "RX_UART_0": "",
+      "Mach_GM_led7_0": "",
+      "CLOCK_16_0": "",
+      "Mux8_4_0": "",
+      "Mux8_4_1": "",
+      "RAM_0": "",
+      "freq_divider_0": "",
+      "ila_0": ""
+    },
+    "ports": {
+      "rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "Rx_0": {
+        "direction": "I"
+      },
+      "ou_0": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "clk_c_0": {
+        "direction": "O"
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "TTCS_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "RX_UART_0": {
+        "vlnv": "xilinx.com:module_ref:RX_UART:1.0",
+        "xci_name": "TTCS_1_RX_UART_0_0",
+        "xci_path": "ip\\TTCS_1_RX_UART_0_0\\TTCS_1_RX_UART_0_0.xci",
+        "inst_hier_path": "RX_UART_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RX_UART",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "TTCS_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Rx": {
+            "direction": "I"
+          },
+          "Rx_done": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "Mach_GM_led7_0": {
+        "vlnv": "xilinx.com:module_ref:Mach_GM_led7:1.0",
+        "xci_name": "TTCS_1_Mach_GM_led7_0_0",
+        "xci_path": "ip\\TTCS_1_Mach_GM_led7_0_0\\TTCS_1_Mach_GM_led7_0_0.xci",
+        "inst_hier_path": "Mach_GM_led7_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mach_GM_led7",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "c": {
+            "direction": "I"
+          },
+          "data_in_1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "data_in_2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ou": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "CLOCK_16_0": {
+        "vlnv": "xilinx.com:module_ref:CLOCK_16:1.0",
+        "xci_name": "TTCS_1_CLOCK_16_0_0",
+        "xci_path": "ip\\TTCS_1_CLOCK_16_0_0\\TTCS_1_CLOCK_16_0_0.xci",
+        "inst_hier_path": "CLOCK_16_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "CLOCK_16",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk100M": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "TTCS_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_16": {
+            "direction": "O"
+          }
+        }
+      },
+      "Mux8_4_0": {
+        "vlnv": "xilinx.com:module_ref:Mux8_4:1.0",
+        "xci_name": "TTCS_1_Mux8_4_0_0",
+        "xci_path": "ip\\TTCS_1_Mux8_4_0_0\\TTCS_1_Mux8_4_0_0.xci",
+        "inst_hier_path": "Mux8_4_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux8_4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Mux8_4_1": {
+        "vlnv": "xilinx.com:module_ref:Mux8_4:1.0",
+        "xci_name": "TTCS_1_Mux8_4_1_0",
+        "xci_path": "ip\\TTCS_1_Mux8_4_1_0\\TTCS_1_Mux8_4_1_0.xci",
+        "inst_hier_path": "Mux8_4_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux8_4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "RAM_0": {
+        "vlnv": "xilinx.com:module_ref:RAM:1.0",
+        "xci_name": "TTCS_1_RAM_0_0",
+        "xci_path": "ip\\TTCS_1_RAM_0_0\\TTCS_1_RAM_0_0.xci",
+        "inst_hier_path": "RAM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RAM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "led_7_1": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "led_7_2": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "wr_en": {
+            "direction": "I"
+          }
+        }
+      },
+      "freq_divider_0": {
+        "vlnv": "xilinx.com:module_ref:freq_divider:1.0",
+        "xci_name": "TTCS_1_freq_divider_0_0",
+        "xci_path": "ip\\TTCS_1_freq_divider_0_0\\TTCS_1_freq_divider_0_0.xci",
+        "inst_hier_path": "freq_divider_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "freq_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "TTCS_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_c": {
+            "direction": "O"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "TTCS_1_ila_0_0",
+        "xci_path": "ip\\TTCS_1_ila_0_0\\TTCS_1_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "5"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "1"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Rx_0_1": {
+        "ports": [
+          "Rx_0",
+          "RX_UART_0/Rx"
+        ]
+      },
+      "RAM_0_led_7_1": {
+        "ports": [
+          "RAM_0/led_7_1",
+          "Mux8_4_0/data_in",
+          "ila_0/probe1"
+        ]
+      },
+      "RAM_0_led_7_2": {
+        "ports": [
+          "RAM_0/led_7_2",
+          "Mux8_4_1/data_in",
+          "ila_0/probe2"
+        ]
+      },
+      "Mach_GM_led7_0_ou": {
+        "ports": [
+          "Mach_GM_led7_0/ou",
+          "ou_0"
+        ]
+      },
+      "freq_divider_0_clk_c": {
+        "ports": [
+          "freq_divider_0/clk_c",
+          "clk_c_0",
+          "Mach_GM_led7_0/c"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "RX_UART_0/rst",
+          "RAM_0/rst",
+          "freq_divider_0/rst"
+        ]
+      },
+      "RX_UART_0_data_out": {
+        "ports": [
+          "RX_UART_0/data_out",
+          "RAM_0/data_in",
+          "ila_0/probe0"
+        ]
+      },
+      "RX_UART_0_Rx_done": {
+        "ports": [
+          "RX_UART_0/Rx_done",
+          "RAM_0/wr_en"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "CLOCK_16_0/clk100M",
+          "RX_UART_0/clk",
+          "freq_divider_0/clk",
+          "ila_0/clk"
+        ]
+      },
+      "CLOCK_16_0_clk_16": {
+        "ports": [
+          "CLOCK_16_0/clk_16",
+          "RAM_0/clk"
+        ]
+      },
+      "Mux8_4_0_data_out": {
+        "ports": [
+          "Mux8_4_0/data_out",
+          "Mach_GM_led7_0/data_in_2",
+          "ila_0/probe3"
+        ]
+      },
+      "Mux8_4_1_data_out": {
+        "ports": [
+          "Mux8_4_1/data_out",
+          "Mach_GM_led7_0/data_in_1",
+          "ila_0/probe4"
+        ]
+      }
+    }
+  }
+}

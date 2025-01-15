@@ -1,0 +1,412 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB4ED138FDA391754",
+      "device": "xc7a35ticsg324-1L",
+      "gen_directory": "../../../../TTCS2_1.gen/sources_1/bd/TTCS",
+      "name": "TTCS",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2.2"
+    },
+    "design_tree": {
+      "fifo_generator_0": "",
+      "util_vector_logic_0": "",
+      "util_vector_logic_1": "",
+      "util_vector_logic_2": "",
+      "util_vector_logic_3": "",
+      "TX_UART_0": "",
+      "RX_UART_0": "",
+      "RAM_0": "",
+      "Mux8_4_0": "",
+      "Mach_GM_led7_0": "",
+      "freq_divider_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "Tx_0": {
+        "direction": "O"
+      },
+      "Rx_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "fifo_generator_0": {
+        "vlnv": "xilinx.com:ip:fifo_generator:13.2",
+        "xci_name": "TTCS_fifo_generator_0_0",
+        "xci_path": "ip\\TTCS_fifo_generator_0_0\\TTCS_fifo_generator_0_0.xci",
+        "inst_hier_path": "fifo_generator_0",
+        "parameters": {
+          "Data_Count": {
+            "value": "false"
+          },
+          "Input_Data_Width": {
+            "value": "8"
+          },
+          "Output_Data_Width": {
+            "value": "8"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "TTCS_util_vector_logic_0_0",
+        "xci_path": "ip\\TTCS_util_vector_logic_0_0\\TTCS_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "TTCS_util_vector_logic_1_0",
+        "xci_path": "ip\\TTCS_util_vector_logic_1_0\\TTCS_util_vector_logic_1_0.xci",
+        "inst_hier_path": "util_vector_logic_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_2": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "TTCS_util_vector_logic_1_1",
+        "xci_path": "ip\\TTCS_util_vector_logic_1_1\\TTCS_util_vector_logic_1_1.xci",
+        "inst_hier_path": "util_vector_logic_2",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_3": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "TTCS_util_vector_logic_2_0",
+        "xci_path": "ip\\TTCS_util_vector_logic_2_0\\TTCS_util_vector_logic_2_0.xci",
+        "inst_hier_path": "util_vector_logic_3",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "TX_UART_0": {
+        "vlnv": "xilinx.com:module_ref:TX_UART:1.0",
+        "xci_name": "TTCS_TX_UART_0_0",
+        "xci_path": "ip\\TTCS_TX_UART_0_0\\TTCS_TX_UART_0_0.xci",
+        "inst_hier_path": "TX_UART_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "TX_UART",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Tx_Start": {
+            "direction": "I"
+          },
+          "Tx": {
+            "direction": "O"
+          },
+          "Tx_done": {
+            "direction": "O"
+          }
+        }
+      },
+      "RX_UART_0": {
+        "vlnv": "xilinx.com:module_ref:RX_UART:1.0",
+        "xci_name": "TTCS_RX_UART_0_0",
+        "xci_path": "ip\\TTCS_RX_UART_0_0\\TTCS_RX_UART_0_0.xci",
+        "inst_hier_path": "RX_UART_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RX_UART",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Rx": {
+            "direction": "I"
+          },
+          "Rx_done": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "RAM_0": {
+        "vlnv": "xilinx.com:module_ref:RAM:1.0",
+        "xci_name": "TTCS_RAM_0_0",
+        "xci_path": "ip\\TTCS_RAM_0_0\\TTCS_RAM_0_0.xci",
+        "inst_hier_path": "RAM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RAM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "led_7_1": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "led_7_2": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "wr_en": {
+            "direction": "I"
+          }
+        }
+      },
+      "Mux8_4_0": {
+        "vlnv": "xilinx.com:module_ref:Mux8_4:1.0",
+        "xci_name": "TTCS_Mux8_4_0_0",
+        "xci_path": "ip\\TTCS_Mux8_4_0_0\\TTCS_Mux8_4_0_0.xci",
+        "inst_hier_path": "Mux8_4_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux8_4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "Mach_GM_led7_0": {
+        "vlnv": "xilinx.com:module_ref:Mach_GM_led7:1.0",
+        "xci_name": "TTCS_Mach_GM_led7_0_0",
+        "xci_path": "ip\\TTCS_Mach_GM_led7_0_0\\TTCS_Mach_GM_led7_0_0.xci",
+        "inst_hier_path": "Mach_GM_led7_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mach_GM_led7",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "c": {
+            "direction": "I"
+          },
+          "data_in_1": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "data_in_2": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ou": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "freq_divider_0": {
+        "vlnv": "xilinx.com:module_ref:freq_divider:1.0",
+        "xci_name": "TTCS_freq_divider_0_0",
+        "xci_path": "ip\\TTCS_freq_divider_0_0\\TTCS_freq_divider_0_0.xci",
+        "inst_hier_path": "freq_divider_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "freq_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk_c": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Rx_0_1": {
+        "ports": [
+          "Rx_0",
+          "RX_UART_0/Rx"
+        ]
+      },
+      "TX_UART_0_Tx": {
+        "ports": [
+          "TX_UART_0/Tx",
+          "Tx_0"
+        ]
+      },
+      "fifo_generator_0_dout": {
+        "ports": [
+          "fifo_generator_0/dout",
+          "TX_UART_0/data"
+        ]
+      },
+      "util_vector_logic_2_Res": {
+        "ports": [
+          "util_vector_logic_2/Res",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "RX_UART_0_Rx_done": {
+        "ports": [
+          "RX_UART_0/Rx_done",
+          "util_vector_logic_0/Op2"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "fifo_generator_0/wr_en"
+        ]
+      },
+      "fifo_generator_0_full": {
+        "ports": [
+          "fifo_generator_0/full",
+          "util_vector_logic_2/Op1"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "fifo_generator_0/clk",
+          "TX_UART_0/clk",
+          "RX_UART_0/clk"
+        ]
+      },
+      "RX_UART_0_data_out": {
+        "ports": [
+          "RX_UART_0/data_out",
+          "fifo_generator_0/din"
+        ]
+      },
+      "util_vector_logic_3_Res": {
+        "ports": [
+          "util_vector_logic_3/Res",
+          "fifo_generator_0/srst"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "util_vector_logic_3/Op1",
+          "TX_UART_0/rst",
+          "RX_UART_0/rst"
+        ]
+      },
+      "fifo_generator_0_empty": {
+        "ports": [
+          "fifo_generator_0/empty",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "TX_UART_0_Tx_done": {
+        "ports": [
+          "TX_UART_0/Tx_done",
+          "fifo_generator_0/rd_en"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "TX_UART_0/Tx_Start"
+        ]
+      }
+    }
+  }
+}

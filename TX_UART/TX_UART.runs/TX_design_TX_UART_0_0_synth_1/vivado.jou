@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2.2 (64-bit)
+# SW Build 3118627 on Tue Feb  9 05:14:06 MST 2021
+# IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+# Start of session at: Sat Jan  4 09:29:46 2025
+# Process ID: 3720
+# Current directory: D:/Vivado/TTCS2/TX_UART/TX_UART.runs/TX_design_TX_UART_0_0_synth_1
+# Command line: vivado.exe -log TX_design_TX_UART_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TX_design_TX_UART_0_0.tcl
+# Log file: D:/Vivado/TTCS2/TX_UART/TX_UART.runs/TX_design_TX_UART_0_0_synth_1/TX_design_TX_UART_0_0.vds
+# Journal file: D:/Vivado/TTCS2/TX_UART/TX_UART.runs/TX_design_TX_UART_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source TX_design_TX_UART_0_0.tcl -notrace

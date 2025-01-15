@@ -1,0 +1,170 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x64D4C055CDCBAD6C",
+      "device": "xc7a35ticsg324-1L",
+      "gen_directory": "../../../../RX_UART.gen/sources_1/bd/UART_RX",
+      "name": "UART_RX",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ila_0": "",
+      "RX_UART_0": ""
+    },
+    "ports": {
+      "Rx_0": {
+        "direction": "I"
+      },
+      "data_out_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "UART_RX_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "UART_RX_ila_0_0",
+        "xci_path": "ip\\UART_RX_ila_0_0\\UART_RX_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "2"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "RX_UART_0": {
+        "vlnv": "xilinx.com:module_ref:RX_UART:1.0",
+        "xci_name": "UART_RX_RX_UART_0_0",
+        "xci_path": "ip\\UART_RX_RX_UART_0_0\\UART_RX_RX_UART_0_0.xci",
+        "inst_hier_path": "RX_UART_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RX_UART",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "UART_RX_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Rx": {
+            "direction": "I"
+          },
+          "Rx_done": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "FSM_RX_0_data_out": {
+        "ports": [
+          "RX_UART_0/data_out",
+          "data_out_0",
+          "ila_0/probe1"
+        ]
+      },
+      "Rx_0_1": {
+        "ports": [
+          "Rx_0",
+          "RX_UART_0/Rx"
+        ]
+      },
+      "RX_UART_0_Rx_done": {
+        "ports": [
+          "RX_UART_0/Rx_done",
+          "ila_0/probe0"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "ila_0/clk",
+          "RX_UART_0/clk"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "RX_UART_0/rst"
+        ]
+      }
+    }
+  }
+}

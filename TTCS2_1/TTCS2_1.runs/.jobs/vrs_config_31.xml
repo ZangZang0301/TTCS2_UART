@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="TTCS_1_RAM_0_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_RAM_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TTCS_1_freq_divider_0_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_freq_divider_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TTCS_1_Mux8_4_0_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_Mux8_4_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TTCS_1_Mux8_4_1_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_Mux8_4_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TTCS_1_Mach_GM_led7_0_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_Mach_GM_led7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TTCS_1_RX_UART_0_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_RX_UART_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="TTCS_1_TX_UART_0_0_synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/TTCS_1_TX_UART_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/Vivado/TTCS2/TTCS2_1/TTCS2_1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="TTCS_1_RAM_0_0_synth_1"/>
+		<Parent Id="TTCS_1_freq_divider_0_0_synth_1"/>
+		<Parent Id="TTCS_1_Mux8_4_0_0_synth_1"/>
+		<Parent Id="TTCS_1_Mux8_4_1_0_synth_1"/>
+		<Parent Id="TTCS_1_Mach_GM_led7_0_0_synth_1"/>
+		<Parent Id="TTCS_1_RX_UART_0_0_synth_1"/>
+		<Parent Id="TTCS_1_TX_UART_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

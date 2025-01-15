@@ -1,0 +1,27 @@
+$date
+        2025-Jan-14 00:00:40
+$end
+$version
+        Vivado v2020.2.2 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " UART_RX_i/RX_UART_0_Rx_done $end
+$var reg 8 # UART_RX_i/FSM_RX_0_data_out [7:0] $end
+$var reg 1 + _TRIGGER $end
+$var reg 1 , _WINDOW $end
+$var reg 1 - _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+b1100010 #
+0+
+1,
+0-
+$end
+#512
+1+
